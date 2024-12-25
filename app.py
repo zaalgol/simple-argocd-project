@@ -22,8 +22,9 @@ class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(100), unique=True, nullable=False)
 
-@app.before_first_request
+@app.before_request
 def create_tables():
+    app.before_request_funcs[None].remove(create_tables)
     db.create_all()
 
 @app.route("/")

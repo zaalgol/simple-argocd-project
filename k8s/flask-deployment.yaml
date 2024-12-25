@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-argocd-project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-argocd-project
+  template:
+    metadata:
+      labels:
+        app: simple-argocd-project
+    spec:
+      containers:
+      - name: simple-argocd-project
+        image: zaalgol/simple-argocd-project:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: DB_USER
+          value: "postgres"
+        - name: DB_PASS
+          value: "postgres"
+        - name: DB_NAME
+          value: "mydb"
+        - name: DB_HOST
+          value: "postgres-db-service"
+        - name: DB_PORT
+          value: "5432"
