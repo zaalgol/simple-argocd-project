@@ -1,4 +1,4 @@
 docker build -t zaalgol/simple-argocd-project:latest .
-docker push zaalgol/simple-argocd-project:latest .
+docker push zaalgol/simple-argocd-project:latest
 
 
