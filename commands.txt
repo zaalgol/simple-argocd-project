@@ -3,6 +3,8 @@ docker push zaalgol/simple-argocd-project:latest
 
 kubectl get pods
 
+
+kubectl port-forward svc/flask-service 8080:80
 curl http://localhost:8080/
 curl http://localhost:8080/items
 
