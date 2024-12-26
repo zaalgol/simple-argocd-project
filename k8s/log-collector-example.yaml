@@ -1,0 +1,10 @@
+apiVersion: mydomain.com/v1
+kind: LogCollector
+metadata:
+  name: my-logs
+spec:
+  deploymentName: simple-argocd-project
+  logSidecar:
+    image: busybox
+    command: ["/bin/sh", "-c"]
+    args: ["tail -n +1 -f /var/log/app.log"]
