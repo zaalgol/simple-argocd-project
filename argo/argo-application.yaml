@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: simple-argocd-project
   namespace: argocd
+  annotations:
+    redeploy-at: "<current-timestamp>"
 spec:
   project: default
   source:
