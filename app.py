@@ -29,7 +29,7 @@ def create_tables():
 
 @app.route("/")
 def hello():
-    return "Hello from Flask + PostgreSQL!"
+    return "Updated text from Flask!"
 
 @app.route("/items", methods=["GET"])
 def get_items():
