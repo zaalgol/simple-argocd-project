@@ -1,6 +1,8 @@
 docker build -t zaalgol/simple-argocd-project:latest .
 docker push zaalgol/simple-argocd-project:latest
 
+kubectl get pods
+
 curl http://localhost:8080/
 curl http://localhost:8080/items
 

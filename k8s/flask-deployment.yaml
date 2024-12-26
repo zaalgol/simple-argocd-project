@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: simple-argocd-project
-        image: zaalgol/simple-argocd-project:latest
+        image: zaalgol/simple-argocd-project:v1.0.1
         imagePullPolicy: Always # will aoto refresh when images change
         ports:
         - containerPort: 5000
