@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/zaalgol/simple-argocd-project.git'
-    targetRevision: controller_and_ingrees
+    targetRevision: 'controller_and_ingrees'
     path: 'k8s'
   destination:
     server: 'https://kubernetes.default.svc'
