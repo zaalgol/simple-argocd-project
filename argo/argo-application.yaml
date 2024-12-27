@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: simple-argocd-project
+  name: simple-argocd-project-controller-and-ingrees
   namespace: argocd
   annotations:
     redeploy-at: "<current-timestamp>"
